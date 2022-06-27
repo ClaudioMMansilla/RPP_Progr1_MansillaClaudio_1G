@@ -1,0 +1,5 @@
+19:25:30 **** Incremental Build of configuration Debug for project MansillaClaudio_1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MansillaClaudio_1G.o" "..\\src\\MansillaClaudio_1G.c" 
+gcc -o MansillaClaudio_1.exe "src\\MansillaClaudio_1G.o" 
+Info: Nothing to build for MansillaClaudio_1

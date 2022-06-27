@@ -1,0 +1,52 @@
+/*
+ ============================================================================
+ Name        : MansillaClaudio_3.c
+3. Crear una función que se llame ordenarCaracteres que reciba una cadena de
+caracteres como parámetro  y su responsabilidad es ordenarlos caracteres de
+ manera ascendente dentro de la cadena. Ejemplo si le pasamos "algoritmo" la
+ deja como "agilmoort"
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "string.h"
+
+
+int ordenarCaracteres(char vec[]);
+
+int main(void) {
+	setbuf(stdout, NULL);
+
+	char vec[15]= "algoritmo";
+	ordenarCaracteres(vec);
+	printf("%s", vec);
+
+	return EXIT_SUCCESS;
+}
+
+
+int ordenarCaracteres(char vec[])
+{
+	int retorno = 0;
+	char aux;
+	int tam = strlen(vec);
+
+	if(vec != NULL && tam > 0)
+	{
+		for(int i=0; i < tam - 1; i++)
+		{
+			for(int j = i + 1; j <tam; j++)
+			{
+				if( vec[i] > vec[j])
+				{
+					aux = vec[i];
+					vec[i] = vec[j];
+					vec[j] = aux;
+				}
+			}
+		}
+		retorno = 1;
+	}
+	return retorno;
+}

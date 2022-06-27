@@ -1,0 +1,47 @@
+/*
+ ============================================================================
+ Name        : MansillaClaudio_1G.c
+1. Dada  una estructura ePais cuyos campos son id(int), nombre(20 caracteres),
+infectados(int), recuperados(int) y muertos(int).
+
+Desarrollar una función llamada actualizarRecuperados que reciba el país y
+los recuperados del dia y que acumule estos a los que ya tiene el país.
+La función no devuelve nada.
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct{
+	int id;
+	char nombre[20];
+	int infectados;
+	int recuperados;
+	int muertos;
+}ePais;
+
+void actualizarRecuperados(ePais* pais, int recuperados);
+
+int main(void) {
+
+	setbuf(stdout, NULL);
+
+	ePais pais = { 1, "Argentina", 0, 2};
+
+	actualizarRecuperados(pais, 5);
+
+	printf("La cantidad de recuperados actual es: %d", pais->recuperados);
+
+
+	return EXIT_SUCCESS;
+}
+
+void actualizarRecuperados(ePais* pais, int recuperados){
+
+
+	if(pais != NULL && recuperados >0)
+	{
+		pais->recuperados = pais->recuperados + recuperados;
+	}
+}

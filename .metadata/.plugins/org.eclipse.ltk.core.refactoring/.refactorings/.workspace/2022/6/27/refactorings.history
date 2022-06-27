@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;MansillaClaudio_1G&apos; to &apos;MansillaClaudio_1&apos;" description="Rename resource &apos;MansillaClaudio_1G&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/MansillaClaudio_1G" name="MansillaClaudio_1" stamp="1656367245957" updateReferences="true"/>
+</session>
